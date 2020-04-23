@@ -1,0 +1,14 @@
+cerberus
+certifi
+cryptography
+flask-cors
+flask-migrate
+flask-restful
+idna
+pip-chill
+protobuf
+psycopg2
+pyjwt
+pylint
+python-dotenv
+wincertstore

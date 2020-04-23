@@ -2,12 +2,13 @@ from flask import Blueprint
 from flask_restful import Api
 
 # Controller
-from app.v1.controllers.auth import AuthLogin, AuthRegister
-from app.v1.controllers.user import User
+from api.v1.controllers import AuthLogin, AuthRegister, PostListController, PostController
 
 blueprint = Blueprint('api_v1', __name__, url_prefix="/api/v1")
 api = Api(blueprint)
 
 api.add_resource(AuthRegister, '/auth/register')
 api.add_resource(AuthLogin, '/auth/login')
-api.add_resource(User, '/user')
+
+api.add_resource(PostListController, '/posts')
+api.add_resource(PostController, '/post/<id>')
