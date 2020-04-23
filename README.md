@@ -6,23 +6,33 @@ Membuat RESTful API & JWT Auth
 ## Installation
 
   1. Install requirements
+    
     ```
     pip install -r requirements.txt
     ```
 
   2. Copy file .**env.example** to **.env** dan sesuaikan configurasinya
+
     ```
     DATABASE_URI=postgresql+psycopg2://postgres:root@localhost/dbname
+    
     SECRET_KEY=31c2tfrdjyfuyh7rb5645wv4355gr6h8
+
     DEBUG=True
     ```
+
   3. Migrate database dengan perintah di bawah
+
     ```
     ~$ python manage.py db init
+
     ~$ python manage.py db migrate -m "first migrate"
+
     ~$ python manage.py db upgrade 
+
     ```
   4. Jalankan aplikasi
+
     ```
     python server.py
     ```
